@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.encabezado {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333;
+    padding: 1.5rem 0;
+}
+
+.titulo {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.busqueda {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.campo-busqueda {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.campo-busqueda:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.boton-buscar {
+    padding: 0.75rem 1.5rem;
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.boton-buscar:hover {
+    background-color: #0052a3;
+}
+
+.principal {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.titulo-seccion {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.mensaje-estado {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    text-align: center;
+    min-height: 1.5rem;
+}
+
+.cuadricula-peliculas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.tarjeta-pelicula {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.tarjeta-pelicula:hover {
+    transform: scale(1.02);
+}
+
+.poster-pelicula {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.sin-poster {
+    width: 100%;
+    height: 300px;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    text-align: center;
+    padding: 1rem;
+}
+
+.info-pelicula {
+    padding: 0.75rem;
+}
+
+.titulo-pelicula {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.anio-pelicula {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.calificacion-pelicula {
+    color: #ffd700;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.sinopsis-pelicula {
+    color: #ccc;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.sinopsis-pelicula.visible {
+    display: block;
+}
+
+.pie-pagina {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.credito {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.credito a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.credito a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .cuadricula-peliculas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .titulo {
+        font-size: 2.5rem;
+    }
+    
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+    
+    .titulo-pelicula {
+        font-size: 1rem;
+    }
+}
